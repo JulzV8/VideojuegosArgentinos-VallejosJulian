@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videojuegos Argentinos</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body class="body">
+    <!-- Header de Navegacion -->
+    <header>
+      <nav class="header__nav">
+        <div class="nav__boton"><a href="../index.html">Inicio</a></div>
+        <div class="nav__boton"><a href="empresas.html">Empresas</a></div>
+        <div class="nav__boton"><a href="juegos.html">Juegos</a></div>
+        <div class="break"></div>
+        <div class="nav__boton"><a href="noticias.html">Noticias</a></div>
+        <div class="nav__boton"><a href="contacto.html">Contacto</a></div>
+      </nav>
+      <img src="../customBanner.png" alt="portada1" class="banner">
+    </header>
+    <!-- Main -->
+    <main>
+      <h2 class="main__h2"><em>Contacto</em></h2>
+      <!-- Form -->
+      <form class ="main__form"action="">
+        <!-- Primer Fieldset -->
+        <fieldset  class="main__form__fieldset"><legend>Registrarse</legend>
+          <div>
+            <label for="usuario">Usuario</label><br>
+            <input type="text" id="usuario" name="usuario"><br>
+            <label for="contra">Contraseña</label><br>
+            <input type="password" id="contra" name="contra">
+          </div>
+          <div>
+            <br><label for="genero">Genero</label>
+            <select name="genero" id="genero">
+              <option value="femenino">Femenino</option>
+              <option value="masculino">Masculino</option>
+              <option value="noBinario">No Binario</option>
+            </select>
+          </div>
+          <!-- Segundo Fieldset -->
+          <br><fieldset><legend>¿Que te interesa mas?</legend>
+            <label for="empleo">Conseguir empleo en la industria</label>
+            <input type="checkbox" id="empleo" name="empleo" value="si"><br>
+            <label for="empresas">Conocer empresas argentinas</label>
+            <input type="checkbox" id="empresas" name="empresas" value="si"><br>
+            <label for="juegos">Conocer juegos argentinos</label>
+            <input type="checkbox" id="juegos" name="juegos" value="si"><br>
+            <label for="noticias">Conocer noticias sobre nuestra industria</label>
+            <input type="checkbox" id="noticias" name="noticias" value="si"><br>
+          </fieldset>
+          <br><input type="submit" value="Registrarse">
+          <input type="reset">
+        </fieldset>
+      </form>
+    </main>
+    <!-- Footer y Contacto -->
+    <footer class="footer">
+    <div class="footer__boton"><a href="https://Youtube.com">Youtube</a></div>
+    <div class="footer__boton"><a href="https://Instagram.com">Instagram</a></div>
+    <div class="footer__boton"><a href="https://Discord.com">Discord</a></div>
+    <div class="footer__boton"><a href="contacto.html">Contacto</a></div>
+    </footer>
+  </body>
+</html>
