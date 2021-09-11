@@ -1,0 +1,56 @@
+@import "mixin";
+$dimensions:300px;
+
+$portadasEmpresas:(
+  purpleTree:"../images/purpletreelogo.png",
+  crimson:"../images/crimsonghostgameslogo.jpg",
+  gameever: "../images/gameeverlogo.jpg",
+  hiddenpeople: "../images/hiddenpeopleclublogo.jpg",
+  menicgames: "../images/menicgameslogo.jpg",
+  robistudios: "../images/robistudioslogo.png",
+);
+
+@each $empresa,$portadas in $portadasEmpresas{
+  .main__portadaEmpresa--#{$empresa}{
+    height: $dimensions/2;
+    width: $dimensions/2;
+    @include portadaJuegos;
+    background-image: url($portadas);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width:768px) {
+    .main__portadaEmpresa--#{$empresa}{
+      height: $dimensions - 100;
+      width: $dimensions - 100;
+      @include portadaJuegos;
+      background-image: url($portadas);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    }
+}
+
+.empresas__containers{
+  @include flex(column);
+  align-items: center;
+}
+
+.empresas__containers__responsive{
+  display: none;
+}
+
+@media (min-width:768px) {
+  .empresas__containers{
+    display: none;
+  }
+  .empresas__containers__responsive{
+    @include flex(row);
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

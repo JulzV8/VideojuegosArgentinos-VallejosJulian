@@ -1,0 +1,33 @@
+@import "_mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body {
+  background: linear-gradient(orange,beige);
+  background-size: auto 2000px;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+div a{
+  color: white;
+  text-decoration: none;
+}
+@media (min-width:769px) {
+  
+  .body{
+    width: 100vw;
+    margin-bottom: 3rem;
+    clear: both;
+  }
+
+}

@@ -1,0 +1,16 @@
+@mixin overflow {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@mixin portadaJuegos {
+  max-width: 100%;
+  object-fit: cover;
+  align-self: center;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+

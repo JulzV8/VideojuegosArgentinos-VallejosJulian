@@ -1,0 +1,576 @@
+/* Etiqueta raiz*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body {
+  background: -webkit-gradient(linear, left top, left bottom, from(orange), to(beige));
+  background: linear-gradient(orange, beige);
+  background-size: auto 2000px;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+div a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .body {
+    width: 100vw;
+    margin-bottom: 3rem;
+    clear: both;
+  }
+}
+
+.header__nav {
+  /* Estilos para el menu de navegacion */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  height: 57px;
+}
+
+.nav__boton, .juegos__boton {
+  /* Estilo para mostrar los botones de navegacion en linea*/
+  text-align: center;
+  font-size: 15px;
+  width: 20%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: solid #424140;
+  background-color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav__boton:hover, .juegos__boton:hover {
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  background-color: beige;
+}
+
+.nav__boton:hover a, .juegos__boton:hover a {
+  color: black;
+}
+
+.juegos__boton {
+  width: 100%;
+}
+
+.juegos__boton:hover {
+  background: -webkit-gradient(linear, left top, right top, from(deepskyblue), to(yellow));
+  background: linear-gradient(to right, deepskyblue, yellow);
+}
+
+.juegos__boton:hover a {
+  color: black;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 0;
+}
+
+@media (min-width: 768px) {
+  .break {
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
+    height: 0;
+  }
+  .header__nav {
+    /* Estilos para el menu de navegacion */
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding-bottom: 0;
+    height: 3rem;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main__h2 {
+  /* Subtitulo main */
+  text-align: center;
+  padding: 1rem;
+  background-color: #328FB4;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.main__divJuego, .main__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__grid {
+  height: 90vh;
+}
+
+.main__grid__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-area: section;
+}
+
+.main__tituloJuego {
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main__portadaJuego {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 20vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main__portadaJuego:hover {
+  -webkit-transform: skewX(2.5deg);
+          transform: skewX(2.5deg);
+  -webkit-transform: skewY(2.5deg);
+          transform: skewY(2.5deg);
+}
+
+.main__parrafoJuegoGrande {
+  display: none;
+  text-align: center;
+}
+
+.main__parrafoJuegoChico {
+  font-size: 15px;
+  margin: 5px;
+  text-align: center;
+}
+
+.main__grid__aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-area: aside;
+  padding-bottom: 3rem;
+}
+
+.main__h3 {
+  /* Sub Subtitulo h3 */
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.main__p {
+  /* Estilo para parrafos */
+  background-color: rgba(255, 255, 255, 0.616);
+  line-height: 3rem;
+  padding: 1rem;
+  font-size: medium;
+}
+
+.main__form {
+  margin: 1rem;
+}
+
+.main__form__fieldset {
+  background-color: rgba(240, 228, 70, 0.521);
+  padding: 1rem;
+}
+
+.lastDiv {
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .main__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+        grid-template-areas: "section section aside" "section section aside" "section section aside";
+    margin-bottom: 3rem;
+  }
+  .main__grid__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: section;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main__grid__aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    grid-area: aside;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main__tituloJuego {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  .main__portadaJuego {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: 15vh;
+  }
+  .main__parrafoJuegoChico {
+    display: none;
+  }
+  .main__parrafoJuegoGrande {
+    font-size: medium;
+    display: inline;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .main__divJuego, .main__grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 5px;
+  }
+  .main__portadaJuego {
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: 20vh;
+  }
+  .main__grid__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    grid-area: section;
+  }
+}
+
+.footer {
+  /* Estilos para el menu de navegacion */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  height: 3rem;
+}
+
+.footer__boton {
+  /* Estilo para mostrar los botones de navegacion en linea*/
+  width: 25%;
+  text-align: center;
+  border: solid #424140;
+  background-color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer__boton:hover {
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  background-color: beige;
+}
+
+.footer__boton:hover a {
+  color: black;
+}
+
+.main__portadaEmpresa--purpleTree {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../images/purpletreelogo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__portadaEmpresa--purpleTree {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-image: url("../images/purpletreelogo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.main__portadaEmpresa--crimson {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../images/crimsonghostgameslogo.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__portadaEmpresa--crimson {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-image: url("../images/crimsonghostgameslogo.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.main__portadaEmpresa--gameever {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../images/gameeverlogo.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__portadaEmpresa--gameever {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-image: url("../images/gameeverlogo.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.main__portadaEmpresa--hiddenpeople {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../images/hiddenpeopleclublogo.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__portadaEmpresa--hiddenpeople {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-image: url("../images/hiddenpeopleclublogo.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.main__portadaEmpresa--menicgames {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../images/menicgameslogo.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__portadaEmpresa--menicgames {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-image: url("../images/menicgameslogo.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.main__portadaEmpresa--robistudios {
+  height: 150px;
+  width: 150px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../images/robistudioslogo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__portadaEmpresa--robistudios {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-image: url("../images/robistudioslogo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.empresas__containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.empresas__containers__responsive {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .empresas__containers {
+    display: none;
+  }
+  .empresas__containers__responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
