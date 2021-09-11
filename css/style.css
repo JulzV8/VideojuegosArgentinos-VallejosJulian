@@ -109,6 +109,17 @@ div a {
   display: block;
 }
 
+.main__h1 {
+  /* Subtitulo main */
+  text-align: center;
+  padding: 1rem;
+  background-color: #328FB4;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
 .main__h2 {
   /* Subtitulo main */
   text-align: center;
